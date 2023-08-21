@@ -1,6 +1,7 @@
 package com.makethis.makethis.models;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,7 @@ public class RecipeCategory extends AbstractEntity {
 
     public String categoryName;
 
+    @OneToMany
     private final List<Recipe> recipes = new ArrayList<>();
 
     public RecipeCategory(String categoryName) {

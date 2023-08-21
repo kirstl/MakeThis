@@ -1,12 +1,14 @@
 package com.makethis.makethis.models;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Ingredient extends AbstractEntity {
 
     private String name;
 
+    @ManyToOne
     private Recipe recipe;
 
 
